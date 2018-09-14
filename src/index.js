@@ -137,7 +137,9 @@ export { SmallRoundedButton      } from './atoms/RoundedButtons';
 export { TinyRoundedButton       } from './atoms/RoundedButtons';
 export { ArrowBullet 			 } from './atoms/ArrowBullet';
 export { LogiclessModal          } from './atoms/LogiclessModal';
-
+export { BreadcrumbItem          } from './atoms/Breadcrumbs/BreadcrumbItem';
+export { BreadcrumbLink          } from './atoms/Breadcrumbs/BreadcrumbLink';
+export { BreadcrumbItemBase      } from './atoms/Breadcrumbs/BreadcrumbItemBase';
 
 // Molecules
 export { NavWithOptionalConstrainer } from './molecules/NavWithOptionalConstrainer';
@@ -168,6 +170,7 @@ export {
 export { WallpaperAd             } from './molecules/WallpaperAd';
 export { StarsRating             } from './molecules/StarsRating';
 export { SearchField             } from './molecules/SearchField';
+export { BreadcrumbBar 			 } from './molecules/BreadcrumbBar';
 
 // Organisms
 export { OppskriftFooter         } from  './molecules/Footers/OppskriftFooter';

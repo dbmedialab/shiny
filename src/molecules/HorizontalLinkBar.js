@@ -14,6 +14,8 @@ const LinkBar = ({
 	width,
 	zIndex,
 	isTopLevelComponent,
+	ListItemElement,
+	before,
 	...rest
 }) => {
 	return (
@@ -30,7 +32,7 @@ const LinkBar = ({
 					}
 
 					return (
-						<LinkBarItem
+						<ListItemElement
 							key={i}
 							position={child.props.position}
 							flex={child.props.flex}
@@ -38,9 +40,11 @@ const LinkBar = ({
 							sm={child.props.sm}
 							md={child.props.md}
 							lg={child.props.lg}
+							preventSeparator={child.props.preventSeparator}
+							before={before}
 						>
 							{child}
-						</LinkBarItem>
+						</ListItemElement>
 					);
 				})}
 			</Bar>
@@ -64,6 +68,7 @@ LinkBar.propTypes = {
 	zIndex: PropTypes.number,
 	isTopLevelComponent: PropTypes.bool,
 	shouldWrap: PropTypes.bool,
+	ListItemElement: PropTypes.func,
 };
 
 LinkBar.defaultProps = {
@@ -78,6 +83,7 @@ LinkBar.defaultProps = {
 	shouldHavePadding: true,
 	isTopLevelComponent: true,
 	shouldWrap: false,
+	ListItemElement: LinkBarItem,
 };
 
 // When we export this as a styled component,
